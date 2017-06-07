@@ -127,7 +127,7 @@ public class WeiboApp   extends JFrame{
 	
 	public static void main(String[] args) {
 		WeiboApp app=new WeiboApp();
-		app.setTitle(arg0);
+		app.setTitle("WeiBOStyle");
 		JFrame frame= new JFrame("WeiBOStyle");
 		frame.setSize(800, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
