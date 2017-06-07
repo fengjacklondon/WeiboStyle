@@ -18,38 +18,22 @@ public class WeiboApp   extends JFrame{
 	
 	private void initUI(){
 		JPanel panel=new JPanel();
-		 /* ²¼¾Ö²¿·ÖÎÒÃÇÕâ±ß²»¶à×ö½éÉÜ
-         * Õâ±ßÉèÖÃ²¼¾ÖÎª null
-         */
         panel.setLayout(null);
 
-        // ´´½¨ JLabel
-        JLabel customerLabel = new JLabel("¿Í»§Ãû³Æ£º");
-        /* Õâ¸ö·½·¨¶¨ÒåÁË×é¼şµÄÎ»ÖÃ¡£
-         * setBounds(x, y, width, height)
-         * x ºÍ y Ö¸¶¨×óÉÏ½ÇµÄĞÂÎ»ÖÃ£¬ÓÉ width ºÍ height Ö¸¶¨ĞÂµÄ´óĞ¡¡£
-         */
+        JLabel customerLabel = new JLabel("ç”¨æˆ·åç§°ï¼š");
         customerLabel.setBounds(10,20,80,50);
         panel.add(customerLabel);
 
-        /* 
-         * ´´½¨ÎÄ±¾ÓòÓÃÓÚÓÃ»§ÊäÈë
-         */
         JTextField customerText = new JTextField(20);
         customerText.setBounds(100,20,165,50);
         panel.add(customerText);
 
-        // ´´½¨ JLabel
-        JLabel answerdescLabel = new JLabel("ÎÊÌâÃèÊö£º");
-        /* Õâ¸ö·½·¨¶¨ÒåÁË×é¼şµÄÎ»ÖÃ¡£
-         * setBounds(x, y, width, height)
-         * x ºÍ y Ö¸¶¨×óÉÏ½ÇµÄĞÂÎ»ÖÃ£¬ÓÉ width ºÍ height Ö¸¶¨ĞÂµÄ´óĞ¡¡£
-         */
+        JLabel answerdescLabel = new JLabel("ç”¨æˆ·é—®é¢˜æè¿°ï¼š");
         answerdescLabel.setBounds(10,60,80,50);
         panel.add(answerdescLabel);
 
         /* 
-         * ´´½¨ÎÄ±¾ÓòÓÃÓÚÓÃ»§ÊäÈë
+         * ä¸­å›½
          */
         JTextField answerDescText = new JTextField(20);
         answerDescText.setBounds(100,60,165,50);
@@ -57,63 +41,38 @@ public class WeiboApp   extends JFrame{
         
         
         
-        // ´´½¨ JLabel
-        JLabel answerLabel = new JLabel("½â¾ö°ì·¨£º");
-        /* Õâ¸ö·½·¨¶¨ÒåÁË×é¼şµÄÎ»ÖÃ¡£
-         * setBounds(x, y, width, height)
-         * x ºÍ y Ö¸¶¨×óÉÏ½ÇµÄĞÂÎ»ÖÃ£¬ÓÉ width ºÍ height Ö¸¶¨ĞÂµÄ´óĞ¡¡£
-         */
+        JLabel answerLabel = new JLabel("è§£å†³åŠæ³•ï¼š");
+       
         answerLabel.setBounds(10,100,80,50);
         panel.add(answerLabel);
 
-        /* 
-         * ´´½¨ÎÄ±¾ÓòÓÃÓÚÓÃ»§ÊäÈë
-         */
         JTextField  answerText = new JTextField(20);
         answerText.setBounds(100,100,165,50);
         panel.add(answerText);
         
         
-        // ´´½¨ JLabel
-        JLabel studyLabel = new JLabel("Ñ§Ï°ÄÚÈİ£º");
-        /* Õâ¸ö·½·¨¶¨ÒåÁË×é¼şµÄÎ»ÖÃ¡£
-         * setBounds(x, y, width, height)
-         * x ºÍ y Ö¸¶¨×óÉÏ½ÇµÄĞÂÎ»ÖÃ£¬ÓÉ width ºÍ height Ö¸¶¨ĞÂµÄ´óĞ¡¡£
-         */
+        JLabel studyLabel = new JLabel("å­¦ä¹ ï¼š");
         studyLabel.setBounds(10,140,80,50);
         panel.add(studyLabel);
 
-        /* 
-         * ´´½¨ÎÄ±¾ÓòÓÃÓÚÓÃ»§ÊäÈë
-         */
         JTextField  studyText = new JTextField(20);
         studyText.setBounds(100,140,165,50);
         panel.add(studyText);
         
         
-        
-        // ´´½¨ JLabel
-        JLabel developLabel = new JLabel("¿ª·¢ÄÚÈİ£º");
-        /* Õâ¸ö·½·¨¶¨ÒåÁË×é¼şµÄÎ»ÖÃ¡£
-         * setBounds(x, y, width, height)
-         * x ºÍ y Ö¸¶¨×óÉÏ½ÇµÄĞÂÎ»ÖÃ£¬ÓÉ width ºÍ height Ö¸¶¨ĞÂµÄ´óĞ¡¡£
-         */
+        JLabel developLabel = new JLabel("å¼€å‘ï¼š");
         developLabel.setBounds(10,180,80,50);
         panel.add(developLabel);
-
-        /* 
-         * ´´½¨ÎÄ±¾ÓòÓÃÓÚÓÃ»§ÊäÈë
-         */
         JTextField  developText = new JTextField(20);
         developText.setBounds(100,180,165,50);
         panel.add(developText);
 
 
-        JButton previewButton = new JButton("Ô¤ÀÀ");
+        JButton previewButton = new JButton("é¢„è§ˆï¼š");
         previewButton.setBounds(200, 240, 80, 50);
         panel.add(previewButton);
         
-        JButton exportButton = new JButton("µ¼³ötxt");
+        JButton exportButton = new JButton("å¯¼å‡ºtxt");
         exportButton.setBounds(300, 240, 80, 50);
         panel.add(exportButton);
         
@@ -122,8 +81,14 @@ public class WeiboApp   extends JFrame{
         previewText.setBounds(100,280,180, 150);
         panel.add(previewText);
         getContentPane().add(panel);
+        
+        previewButton.addActionListener(new PreviewBtnListener(customerText));
+//        exportButton.addActionListener(new PreviewBtnListener(exportButton));
 		
 	}
+	
+	
+	
 	
 	public static void main(String[] args) {
 		WeiboApp app=new WeiboApp();
