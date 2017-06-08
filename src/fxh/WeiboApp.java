@@ -1,99 +1,56 @@
 package fxh;
 
-import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class WeiboApp   extends JFrame{
 	
+public class WeiboApp   extends JFrame{
+	private  List<String> content=new ArrayList<String>();
+	private int count=0;
 	public WeiboApp(){
 		super();
 		initUI();
 	}
 	
 	private void initUI(){
-		JPanel panel=new JPanel();
-        panel.setLayout(null);
-
-        JLabel customerLabel = new JLabel("用户名称：");
-        customerLabel.setBounds(10,20,80,50);
-        panel.add(customerLabel);
-
-        JTextField customerText = new JTextField(20);
-        customerText.setBounds(100,20,165,50);
-        panel.add(customerText);
-
-        JLabel answerdescLabel = new JLabel("用户问题描述：");
-        answerdescLabel.setBounds(10,60,80,50);
-        panel.add(answerdescLabel);
-
-        /* 
-         * 中国
-         */
-        JTextField answerDescText = new JTextField(20);
-        answerDescText.setBounds(100,60,165,50);
-        panel.add(answerDescText);
-        
-        
-        
-        JLabel answerLabel = new JLabel("解决办法：");
-       
-        answerLabel.setBounds(10,100,80,50);
-        panel.add(answerLabel);
-
-        JTextField  answerText = new JTextField(20);
-        answerText.setBounds(100,100,165,50);
-        panel.add(answerText);
-        
-        
-        JLabel studyLabel = new JLabel("学习：");
-        studyLabel.setBounds(10,140,80,50);
-        panel.add(studyLabel);
-
-        JTextField  studyText = new JTextField(20);
-        studyText.setBounds(100,140,165,50);
-        panel.add(studyText);
-        
-        
-        JLabel developLabel = new JLabel("开发：");
-        developLabel.setBounds(10,180,80,50);
-        panel.add(developLabel);
-        JTextField  developText = new JTextField(20);
-        developText.setBounds(100,180,165,50);
-        panel.add(developText);
-
-
-        JButton previewButton = new JButton("预览：");
-        previewButton.setBounds(200, 240, 80, 50);
-        panel.add(previewButton);
-        
-        JButton exportButton = new JButton("导出txt");
-        exportButton.setBounds(300, 240, 80, 50);
-        panel.add(exportButton);
-        
-        
-        JTextField  previewText = new JTextField(20);
-        previewText.setBounds(100,280,180, 150);
-        panel.add(previewText);
-        getContentPane().add(panel);
-        
-        previewButton.addActionListener(new PreviewBtnListener(customerText));
+	 new JpanelTemplate(5);
+//	 JButton addButton = new JButton("添加：");
+//     addButton.setBounds(100, 240, 80, 50);
+//     JpanelTemplate.panel.add(addButton);
+     
+     JButton previewButton = new JButton("预览：");
+     previewButton.setBounds(200, 240, 80, 50);
+     JpanelTemplate.panel.add(previewButton);
+     
+     JButton exportButton = new JButton("导出txt");
+     exportButton.setBounds(300, 240, 80, 50);
+     JpanelTemplate.panel.add(exportButton);
+     
+     JTextArea  previewText = new JTextArea(500,100);
+     previewText.setBounds(100,400,800, 400);
+     JpanelTemplate.panel.add(previewText);
+     
+    // addButton.addActionListener(new AddBtnListener(++count,this));
+     
+  
+        previewButton.addActionListener(new PreviewBtnListener(JpanelTemplate.panel));
 //        exportButton.addActionListener(new PreviewBtnListener(exportButton));
+        
+        getContentPane().add( JpanelTemplate.panel);
 		
 	}
-	
-	
-	
-	
+
 	public static void main(String[] args) {
 		WeiboApp app=new WeiboApp();
 		app.setTitle("WeiBOStyle");
-		app.setSize(800, 500);
+		app.setSize(1500, 1000);
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		app.setVisible(true);
 	}
